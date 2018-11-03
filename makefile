@@ -9,7 +9,9 @@ clean:
 	rm -rf *.svg *.png
 
 build:
-	python barcode-gen.py `cat codes`
+	python barcode-gen.py kit_label `cat kit-codes`
+	python barcode-gen.py short_kit_label `cat kit-codes-short`
+	python barcode-gen.py team_label `cat team-codes`
 	for i in *.svg; do\
 	 inkscape $$i --export-png "$${i%.*}.png" --export-width=991 --export-height=306;\
 	done
