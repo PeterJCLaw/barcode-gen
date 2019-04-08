@@ -1,2 +1,3 @@
 code128
 pyqrcode
+brother-ql
